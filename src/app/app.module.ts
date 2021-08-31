@@ -10,6 +10,8 @@ import {
   EventService,
   EventDetailsComponent,
   CreateEventComponent,
+  CreateSessionComponent,
+  SessionListComponent
 } from './events/index';
 
 import { EventsAppComponent } from './events-app.component';
@@ -19,6 +21,7 @@ import { Error404Component } from './errors/404.component';
 import { EventRouteActivator } from './events/event-details/event-route-activator.service';
 import { EventListResolver } from './events/events-list-resolver.service';
 import { AuthService } from './user/auth.service';
+import { CollapsibleWellComponent } from './common/collapsible-well.component';
 
 @NgModule({
   imports: [
@@ -35,6 +38,9 @@ import { AuthService } from './user/auth.service';
     EventDetailsComponent,
     CreateEventComponent,
     Error404Component,
+    CreateSessionComponent,
+    SessionListComponent,
+    CollapsibleWellComponent,
   ],
   providers: [
     EventService, 
