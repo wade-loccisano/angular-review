@@ -8,6 +8,7 @@ import {
   Toastr, 
   CollapsibleWellComponent,
   SimpleModalComponent,
+  ModalTriggerDirective,
  } from './common/index';
 
 import {
@@ -52,6 +53,8 @@ let jQuery = window['$'];
     CollapsibleWellComponent,
     SimpleModalComponent,
     DurationPipe,
+    ModalTriggerDirective,
+    SimpleModalComponent,
   ],
   providers: [
     EventService, 
