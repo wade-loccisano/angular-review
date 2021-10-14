@@ -23,15 +23,16 @@ import {
   UpvoteComponent,
   VoterService,
   LocationValidator,
+  EventResolver,
 } from './events/index';
 
 import { EventsAppComponent } from './events-app.component';
 import { NavBarComponent } from './nav/navbar-component';
 import { appRoutes } from './routes';
 import { Error404Component } from './errors/404.component';
-import { EventRouteActivator } from './events/event-details/event-route-activator.service';
 import { EventListResolver } from './events/events-list-resolver.service';
 import { AuthService } from './user/auth.service';
+import { HttpClientModule } from '@angular/common/http';
 
 let toastr: Toastr = window['toast'];
 let jQuery = window['$'];
@@ -42,6 +43,7 @@ let jQuery = window['$'];
     FormsModule,
     ReactiveFormsModule,
     RouterModule.forRoot(appRoutes),
+    HttpClientModule,
   ],
   declarations: [
     EventsAppComponent,
@@ -72,7 +74,7 @@ let jQuery = window['$'];
       provide: jQ_TOKEN,
       useValue: jQuery
     }, 
-    EventRouteActivator,
+    EventResolver,
     EventListResolver,
     { 
       provide: 'canDeactivateCreateEvent', 
